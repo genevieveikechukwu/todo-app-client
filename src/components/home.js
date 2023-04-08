@@ -54,7 +54,8 @@ function Home() {
                         setCategory(e.target.value);
                     }}
                 />
-                    <input
+            <input
+                className="check-box"
                         type="checkbox"
                         name="subscribe"
                         value="1"
@@ -62,8 +63,9 @@ function Home() {
                             setStatus(e.target.value);
                         }}
                     />
-
-                <button type="submit" onClick={addTodo}>
+            <button class="btn edit"><i class="fa fa-edit"></i></button>
+            <button class="btn trash"><i class="fa fa-trash"></i></button>
+                <button className="add-btn" type="submit" onClick={addTodo}>
                     Add
                 </button>
                 {todoList.map((val) => {

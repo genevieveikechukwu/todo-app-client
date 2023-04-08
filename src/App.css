@@ -1,12 +1,12 @@
 .App {
   text-align: center;
-      border: 1px solid #ccc;
-        border-radius: 5px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
 }
 
 .swal-icon {
@@ -52,95 +52,167 @@ button {
   border: 3px solid rgb(218, 150, 218);
   background-color: rgb(218, 150, 218);
   border-radius: 30px;
+  cursor: pointer;
 }
 
-.signup-form{
+.signup-form {
   display: flex;
   height: 50vh;
-  
+
 }
 
-input{
+input {
   border: 2px solid white;
   border-radius: 10px;
   background-color: rgb(238, 231, 231);
 }
-.welcome{
+
+.welcome {
   background-color: aquamarine;
   padding: 10px;
 }
 
-.welcome button{
-    position: relative;
-    top: 50%;
-    width: 20vw;
-    height: 30px;
-    padding: 5px;
+.welcome button {
+  position: relative;
+  top: 50%;
+  width: 20vw;
+  height: 30px;
+  padding: 5px;
 }
 
 
-.signup-form input{
+.signup-form input {
 
   position: relative;
-  width:90% ;
+  width: 90%;
   height: 7vh;
   margin: 5px;
 
 }
-.signup-form h1{
+
+.signup-form h1 {
   position: absolute;
   top: -40%;
   left: 40%
-
 }
-.signup-form :nth-child(5){
+
+.signup-form :nth-child(5) {
 
   position: relative;
-  top:5%;
-  padding:5px;
+  top: 5%;
+  padding: 5px;
 
 }
-.signin{
+
+.signin {
   top: 30%;
 }
-.signin-btn{
+
+.signin-btn {
   position: relative;
   top: 40%;
 }
 
-#description, #category{
-  display:none
+#description,
+#category {
+  display: none
 }
 
-.list-items, .items{
+.list-items,
+.items {
   display: none;
 }
-.Home{
+
+.Home {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.Home #title{
+
+.Home #title {
   margin-top: 15px;
-width: 90%;
-height: 50px;
+  width: 90%;
+  height: 40px;
 }
-.Home h1{
-    position: absolute;
-      top: -250px;
-      left: 40%
+
+.Home h1 {
+  position: absolute;
+  top: -200px;
+  left: 40%
+}
+
+#description {
+  margin-top: 15px;
+  display: block;
+  width: 90%;
+  height: 50px;
+  background-color: cyan;
+}
+
+.check-box {
+  position: absolute;
+  top: 95px;
+  left: 450px;
+}
+
+.add-btn {
+  position: relative;
+  padding: 5px;
+  width: 70px;
+  height: 40px;
+  border-radius: 8px;
+  left: 200px;
+  top: -200px;
+
+}
+
+.trash {
+  position: absolute;
+  top: 86px;
+  left: 410px;
+  width: 5px;
+  height: 10px;
+  border: none;
+  border-radius: 0%;
+  background-color: cyan;
+}
+.fa{
+  color: rgb(184, 5, 184);
+}
+.edit {
+  position: absolute;
+  top: 87px;
+  left: 380px;
+  width: 5px;
+  height: 10px;
+  border: none;
+  background-color: cyan;
+  border-radius: 0%;
 }
 
 @media only screen and (min-width: 992px) {
-.welcome button {
+  .welcome button {
     position: relative;
     top: 50%;
     width: 10vw;
     height: 30px;
     padding: 5px;
   }
+
   /* CSS styles for desktop screens go here */
-  .App{
-    width:700px;
+  .App {
+    width: 700px;
+  }
+
+  .check-box {
+    position: absolute;
+    top: 95px;
+    left: 640px;
+  }
+  .trash{
+left:600px;
+  }
+  .edit{
+left: 565px
   }
 }
