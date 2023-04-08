@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   border: 1px solid #ccc;
   border-radius: 5px;
   position: absolute;
@@ -45,6 +45,9 @@ input {
   border: 2px solid white;
   border-radius: 10px;
   background-color: rgb(238, 231, 231);
+
+  padding-top: 5px;
+  padding-left:10px ;
 }
 
 .welcome {
@@ -102,7 +105,7 @@ input {
 }
 .item{
   display: flex;
-  width: 80%;
+  width: 90%;
   flex-direction: column;
   color: black;
 }
@@ -121,20 +124,15 @@ input {
 
 #description {
   margin-top: 15px;
-  display: block;
   width: 100%;
-  margin-right:4.4%;
   height: 50px;
   background-color: cyan;
   color: black;
   border-radius: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.check-box {
-  position: absolute;
-  top: 95px;
-  left: 400px;
-}
 
 .add-btn {
   position: absolute;
@@ -147,28 +145,20 @@ input {
 
 }
 
-.trash {
-  position: absolute;
-  top: 86px;
-  left: 370px;
-  width: 5px;
-  height: 10px;
-  border: none;
-  border-radius: 0%;
-  background-color: cyan;
-}
+
 .fa{
   color: rgb(184, 5, 184);
+  position: relative;
+  left: 35%;
+  margin: 5px;
+  
 }
-.edit {
+
+
+.signout{
   position: absolute;
-  top: 87px;
-  left: 340px;
-  width: 5px;
-  height: 10px;
-  border: none;
-  background-color: cyan;
-  border-radius: 0%;
+  top:-100px;
+  left:700px;
 }
 
 @media only screen and (min-width: 992px) {

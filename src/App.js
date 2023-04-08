@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Routes } from "react-router-dom";
+import {Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 
 
@@ -9,15 +9,15 @@ import Login from "./components/signIn";
 
 
 function App() {
-  // const user = localStorage.getItem("token")
+  const user = localStorage.getItem("token")
   return (
     <>
       <div className="App">
         <Routes>
-          
-          <Route path="/" element={<Register />} />
-          <Route path="/home" element={<Home />} />
+          {user && <Route path="/" exact element={<Home />} />}
+          <Route path="/signup" element={<Register />} />
           <Route path="/signin" element={<Login/>} />
+          <Route path="/" exact element={<Navigate replace to ="/signin"/>} />
     
         </Routes>
       </div>
