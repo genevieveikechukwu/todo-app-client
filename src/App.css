@@ -108,6 +108,29 @@ input{
   top: 40%;
 }
 
+#description, #category{
+  display:none
+}
+
+.list-items, .items{
+  display: none;
+}
+.Home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Home #title{
+  margin-top: 15px;
+width: 90%;
+height: 50px;
+}
+.Home h1{
+    position: absolute;
+      top: -250px;
+      left: 40%
+}
+
 @media only screen and (min-width: 992px) {
 .welcome button {
     position: relative;

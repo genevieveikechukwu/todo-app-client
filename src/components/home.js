@@ -28,10 +28,8 @@ function Home() {
         });
     };
     return (
-        <div className="App">
+        <div className="Home">
             <h1>TODO APP</h1>
-            <div className="form">
-                <label htmlFor="title">Title</label>
                 <input
                     type="text"
                     name="todo"
@@ -40,7 +38,6 @@ function Home() {
                         setTitle(e.target.value);
                     }}
                 />
-                <label htmlFor="description">Description</label>
                 <input
                     type="text"
                     name="todo"
@@ -49,7 +46,6 @@ function Home() {
                         setDescription(e.target.value);
                     }}
                 />
-                <label htmlFor="category">Category</label>
                 <input
                     type="text"
                     name="todo"
@@ -58,7 +54,6 @@ function Home() {
                         setCategory(e.target.value);
                     }}
                 />
-                <label>
                     <input
                         type="checkbox"
                         name="subscribe"
@@ -67,20 +62,18 @@ function Home() {
                             setStatus(e.target.value);
                         }}
                     />
-                </label>
 
                 <button type="submit" onClick={addTodo}>
                     Add
                 </button>
                 {todoList.map((val) => {
                     return (
-                        <div className="listItems">
+                        <div className="list-items">
                             <p className="items">title: {val.title}</p>
                         </div>
                     );
                 })}
             </div>
-        </div>
     );
 }
 
