@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+      border: 1px solid #ccc;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
 }
 
 .swal-icon {
@@ -39,10 +46,78 @@
 
 button {
   width: 150px;
-  height: 50px;
+  height: 40px;
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 16px;
   border: 3px solid rgb(218, 150, 218);
-  background-color: rgb(149, 149, 223);
-  border-radius: 3%;
+  background-color: rgb(218, 150, 218);
+  border-radius: 30px;
+}
+
+.signup-form{
+  display: flex;
+  height: 50vh;
+  
+}
+
+input{
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgb(238, 231, 231);
+}
+.welcome{
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.welcome button{
+    position: relative;
+    top: 50%;
+    width: 20vw;
+    height: 30px;
+    padding: 5px;
+}
+
+
+.signup-form input{
+
+  position: relative;
+  width:90% ;
+  height: 7vh;
+  margin: 5px;
+
+}
+.signup-form h1{
+  position: absolute;
+  top: -40%;
+  left: 40%
+
+}
+.signup-form :nth-child(5){
+
+  position: relative;
+  top:5%;
+  padding:5px;
+
+}
+.signin{
+  top: 30%;
+}
+.signin-btn{
+  position: relative;
+  top: 40%;
+}
+
+@media only screen and (min-width: 992px) {
+.welcome button {
+    position: relative;
+    top: 50%;
+    width: 10vw;
+    height: 30px;
+    padding: 5px;
+  }
+  /* CSS styles for desktop screens go here */
+  .App{
+    width:700px;
+  }
 }
