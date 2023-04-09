@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0%;
   padding: 0%;
   border: 0cap;
@@ -6,7 +6,7 @@
 }
 
 .App {
-  text-align: center;
+
   border: 1px solid #ccc;
   border-radius: 5px;
   position: absolute;
@@ -14,26 +14,37 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
+  font-family: 'Comfortaa', cursive;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
+
+
+.signin-error {
+  color: red;
+  font-size: 1.5em;
+  margin-top: 1em;
+  font-style: italic;
+}
+
+form {
+
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 10px;
+
 }
 
-.form input {
+form input {
   width: 300px;
-  height: 30px;
-  font-size: 25px;
-  padding: 5px;
+  font-size: 15px;
+  padding: 30px;
   margin: 10px;
 }
 
 button {
-    width: 100px;
-      height: 45px;
+  width: 100px;
+  height: 45px;
   padding: 10px;
   font-size: 16px;
   border: 3px solid rgb(218, 150, 218);
@@ -63,9 +74,10 @@ input {
 .welcome button {
   position: relative;
   top: 50%;
-    width: 100px;
-      height: 45px;
+  width: 100px;
+  height: 45px;
   padding: 10px;
+
 }
 
 
@@ -81,7 +93,7 @@ input {
 .signup-form h1 {
   position: absolute;
   top: -40%;
-  left: 40%
+  left: 30%
 }
 
 .signup-form :nth-child(5) {
@@ -96,8 +108,8 @@ input {
 }
 
 .signin-btn {
-      width: 100px;
-        height: 45px;
+  width: 100px;
+  height: 45px;
   position: relative;
   top: 40%;
 }
@@ -109,13 +121,14 @@ input {
   flex-direction: column;
   align-items: center;
 }
-.item{
+
+.item {
   width: 90%;
-position: relative;
-margin-top: 1rem;
-padding: 1.5rem 3rem;
-background-color: cyan;
-border-radius: 5px;
+  position: relative;
+  margin-top: 1rem;
+  padding: 1.5rem 3rem;
+  background-color: cyan;
+  border-radius: 5px;
 }
 
 .Home #title {
@@ -132,7 +145,6 @@ border-radius: 5px;
 
 
 
-
 .add-btn {
   position: absolute;
   padding: 5px;
@@ -145,27 +157,35 @@ border-radius: 5px;
 }
 
 
-.icons{
+.icons {
   color: rgb(184, 5, 184);
   position: absolute;
-top:50%;
-right: 10px;
+  top: 50%;
+  right: 10px;
   transform: translateY(-50%);
   display: flex;
   gap: 0.5rem;
-  
+
 }
-.fa{
+
+.fa {
   cursor: pointer;
 }
 
 
-.signout{
-    width: 100px;
-      height: 45px;
+.signout {
+  width: 100px;
+  height: 45px;
   position: absolute;
-  top:-100px;
-  left:5px;
+  top: -100px;
+  left: 5px;
+}
+
+.error {
+  color: red;
+  margin-top: 1.7em;
+  font-size: 1.5em;
+  font-style: italic;
 }
 
 @media only screen and (min-width: 992px) {
@@ -173,7 +193,7 @@ right: 10px;
     position: relative;
     top: 50%;
     width: 100px;
-      height: 45px;
+    height: 45px;
     padding: 5px;
   }
 
@@ -182,7 +202,7 @@ right: 10px;
     width: 700px;
   }
 
-.add-btn {
-  left: 600px;
-}
+  .add-btn {
+    left: 600px;
+  }
 }

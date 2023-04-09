@@ -12,7 +12,7 @@ function Home() {
 
 
   const fetch = () => {
-    Axios.get("http://localhost:3001/api/todo")
+    Axios.get("https://todo-server-b5mu.onrender.com/api/todo")
       .then((res) => {
         setTodo(res.data);
         console.log(res.data);
@@ -34,7 +34,7 @@ fetch()
 
 
   const deleteTodo = (id) => { 
-    Axios.delete(`http://localhost:3001/api/todo/${id}`).then((res) => {
+    Axios.delete(`https://todo-server-b5mu.onrender.com/api/todo/${id}`).then((res) => {
       console.log(res)
       fetch()
     })
@@ -47,7 +47,7 @@ fetch()
 
   const add = () => {
      
-      Axios.post("http://localhost:3001/api/todo/add", {
+    Axios.post("https://todo-server-b5mu.onrender.com/api/todo/add", {
         text: text,
         status: ""
       }).then((res) => {
@@ -62,7 +62,7 @@ fetch()
 
   const update = (id) => {
 
-      Axios.put(`http://localhost:3001/api/todo/${id}`, {   
+    Axios.put(`https://todo-server-b5mu.onrender.com/api/todo/${id}`, {   
          text,
       }).then((res) => {
         setText("");
