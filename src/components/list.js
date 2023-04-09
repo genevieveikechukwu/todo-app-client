@@ -9,7 +9,7 @@ import { useState } from "react";
    remove the edit button through styling by setting display to none
 */
 
-function Item({ text, remove, update, completed }) {
+function Item({id, text, remove, update}) {
 
     const [status, setStatus] = useState(false);
     
@@ -21,13 +21,14 @@ function Item({ text, remove, update, completed }) {
         <div className="item">
             <div id="description" className="text">
                 {text}
+
+            </div>
                 <div className="icons">
-                    <i className="fa fa-edit" onClick={update} style={{ display: status ? "none" : "in-line" }}></i>
-                    <i className="fa fa-trash" onClick={remove}></i>
+                <i className="fa fa-edit" onClick={update} style={{ display: status ? "none" : "in-line" }}>{ id}</i>
+                <i className="fa fa-trash" onClick={remove}>{ id}</i>
                     <i className="fa fa-check-square-o" onClick={handleClick}></i>
                 </div>
 
-            </div>
 
         </div>
             )

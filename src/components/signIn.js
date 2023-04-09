@@ -17,7 +17,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = "https://todo-server-b5mu.onrender.comapi/todo/signin";
+            const url = "http://localhost:3001/api/todo/signin";
             const { data: res } = await Axios.post(url, data);
             localStorage.setItem("token", res.data);
             window.location = "/"

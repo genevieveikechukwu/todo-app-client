@@ -7,11 +7,12 @@ function Home() {
   const [text, setText] = useState("");
 
 
-  const [todo, setTodo] = useState([]);
+  const [todos, setTodo] = useState([]);
   const [isUpdating, setUpdating] = useState("");
 
-  useEffect(() => {
-    Axios.get("https://todo-server-b5mu.onrender.com/api/todo")
+
+  const fetch = () => {
+    Axios.get("http://localhost:3001/api/todo")
       .then((res) => {
         setTodo(res.data);
         console.log(res.data);
@@ -19,6 +20,10 @@ function Home() {
       .catch((err) => {
         console.log(err);
       });
+  }
+
+  useEffect(() => { 
+fetch()
   }, []);
 
 
@@ -26,48 +31,69 @@ function Home() {
     localStorage.removeItem("token");
     window.location.reload();
   };
+
+
   const deleteTodo = (id) => { 
-    Axios.delete(`https://todo-server-b5mu.onrender.com/api/todo/:id`, { id
-    }).then((res) => {
-      console.log(res.data.id);
+    Axios.delete(`http://localhost:3001/api/todo/${id}`).then((res) => {
+      console.log(res)
+      fetch()
     })
       .catch((err) => {
         console.log(err)
       })
+    console.log(id)
   };
 
 
-  const addUpdate = () => {
-    if (isUpdating === "") {
-      Axios.post("https://todo-server-b5mu.onrender.com/api/todo/add", {
+  const add = () => {
+     
+      Axios.post("http://localhost:3001/api/todo/add", {
         text: text,
-        status:""
+        status: ""
       }).then((res) => {
         setText("");
         console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-    } else {
-      Axios.put(`https://todo-server-b5mu.onrender.com/api/todo/:id`, {
-        text,
-        isUpdating,
-      }).then((res) => {
-        setText("");
-        setUpdating("")
-        console.log(res.data);
+        fetch()
       })
         .catch((err) => {
           console.log(err)
         })
+  }
+
+  const update = (id) => {
+
+      Axios.put(`http://localhost:3001/api/todo/${id}`, {   
+         text,
+      }).then((res) => {
+        setText("");
+        setUpdating("")
+        console.log(res.data);
+        fetch()
+      })
+        .catch((err) => {
+          console.log(err)
+        })
+      
     }
-  };
+  ;
+  const addUpdate = () => {
+    if (isUpdating === "") {
+      add()
+    } else if (isUpdating !== "") {
+      update(isUpdating)
+    }
+
+       
+  }
 
   const updateTodo = (id, text) => {
-    
+   
     setUpdating(id)
+
     setText(text)
+    console.log(id)
+   
+
    };
 
   // --------------------------------------------------------------------------------
@@ -87,18 +113,14 @@ function Home() {
         }}
       />
 
-      {todo.map((item) => (
-        <Item
-          key={item.id}
-          text={item.text}
-          remove={() => deleteTodo(item.id)}
-          update={() => {
-            updateTodo(item.id, item.text);
-          }}
-        />
-      ))}
+      {todos.map(todo => <Item
+        key={todo.id}
+        text={todo.text}
+        remove={() => deleteTodo(todo.id)}
+        update={() => updateTodo(todo.id, todo.text)}
+      />)}
 
-      <button className="add-btn" type="submit" onClick={addUpdate}>
+      <button className="add-btn" id="reload" type="submit" onClick={addUpdate}>
         {isUpdating ? "Update": "Add"}
       </button>
       <Link to="/signup">
