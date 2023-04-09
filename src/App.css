@@ -206,3 +206,50 @@ input {
     left: 600px;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  /* CSS styles for phones */
+
+  .App {
+    width: 400px;
+  }
+
+  .button {
+    width: 50px;
+    height: 20px;
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input {
+    padding: 10px;
+  }
+
+  .welcome {
+    background-color: white;
+  }
+
+  .welcome button {
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    font-size: 10px;
+    position: absolute;
+    top: -10%;
+    left: 70%;
+  }
+
+  .signup-form {
+    margin: 5%;
+  }
+
+  .error,
+  .signin-error {
+    font-size: 1em;
+    margin: 3em;
+  }
+}
