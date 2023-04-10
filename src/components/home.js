@@ -15,10 +15,11 @@ function Home() {
     Axios.get("https://todo-server-b5mu.onrender.com/api/todo")
       .then((res) => {
         setTodo(res.data);
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
+        return err
       });
   }
 
@@ -35,13 +36,16 @@ fetch()
 
   const deleteTodo = (id) => { 
     Axios.delete(`https://todo-server-b5mu.onrender.com/api/todo/${id}`).then((res) => {
-      console.log(res)
+      // console.log(res)
+      
       fetch()
+      return res
     })
       .catch((err) => {
-        console.log(err)
+        // console.log(err)
+        return err
       })
-    console.log(id)
+    // console.log(id)
   };
 
 
@@ -52,11 +56,12 @@ fetch()
         status: ""
       }).then((res) => {
         setText("");
-        console.log(res.data);
+        // console.log(res.data);
         fetch()
       })
         .catch((err) => {
-          console.log(err)
+          // console.log(err)
+          return err
         })
   }
 
@@ -67,11 +72,12 @@ fetch()
       }).then((res) => {
         setText("");
         setUpdating("")
-        console.log(res.data);
+        // console.log(res.data);
         fetch()
       })
         .catch((err) => {
-          console.log(err)
+          // console.log(err)
+          return err
         })
       
     }
@@ -91,7 +97,7 @@ fetch()
     setUpdating(id)
 
     setText(text)
-    console.log(id)
+    // console.log(id)
    
 
    };

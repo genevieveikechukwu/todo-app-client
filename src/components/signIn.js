@@ -28,7 +28,7 @@ function Login() {
             ) {
                 setError(error.response.data.message);
             }
-            console.log(error);
+            // console.log(error);
         }
     };
 
