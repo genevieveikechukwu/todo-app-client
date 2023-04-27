@@ -24,7 +24,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://todo-server-b5mu.onrender.com/api/todo/signup";
+      const url = "http://localhost:3001/api/todo/signup";
       const { data: res } = await Axios.post(url, data);
       navigate("/signin")
       console.log(res.message);
